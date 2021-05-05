@@ -31,20 +31,20 @@
 		CHECK(board.is_clean() == true);
 	  
 		board[City::London] = 1;
-	board[City::Paris] = 2;
-	  board[City::Milan] = 3;
-	  board[City::Madrid] = 4;
+	        board[City::Paris] = 2;
+	        board[City::Milan] = 3;
+	        board[City::Madrid] = 4;
 		board[City::Bangkok] = 5;
 		board[City::Beijing] = 0;
 		board[City::BuenosAires] = 1;
 		board[City::Delhi] = 2;
 		board[City::HongKong] = 3;
 		board[City::Istanbul] = 4;
-	  board[City::LosAngeles] = 5;
-	  board[City::SanFrancisco] = 0;
-	  board[City::Chicago] = 1;
-	  board[City::Atlanta] = 2;
-	  board[City::Miami] = 3;
+	        board[City::LosAngeles] = 5;
+	        board[City::SanFrancisco] = 0;
+	        board[City::Chicago] = 1;
+	        board[City::Atlanta] = 2;
+         	board[City::Miami] = 3;
 	
 
 		// check the diseases level
@@ -87,19 +87,19 @@
 	  
 		board[City::London] = 5;
 		board[City::Paris] = 4;
-	  board[City::Milan] = 0;
-	  board[City::Madrid] = 2;
+	        board[City::Milan] = 0;
+	        board[City::Madrid] = 2;
 		board[City::Bangkok] = 1;
 		board[City::Beijing] = 5;
 		board[City::BuenosAires] = 4;
 		board[City::Delhi] = 3;
 		board[City::HongKong] = 2;
 		board[City::Istanbul] = 1;
-	  board[City::LosAngeles] = 0;
-	  board[City::SanFrancisco] = 5;
-	  board[City::Chicago] = 4;
-	  board[City::Atlanta] = 3;
-	  board[City::Miami] = 2;
+	        board[City::LosAngeles] = 0;
+	        board[City::SanFrancisco] = 5;
+	        board[City::Chicago] = 4;
+	        board[City::Atlanta] = 3;
+	        board[City::Miami] = 2;
 	
 
 	  
