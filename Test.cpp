@@ -152,9 +152,7 @@
 		CHECK_NOTHROW(player.fly_charter(London));
 		CHECK_NOTHROW(player.treat(London));
 		CHECK(board[City::London] == 4);
-	        CHECK_THROWS_AS((board[City::London] == 0),std::exception);
-	
-
+	        
 	  //check role
 	       CHECK_EQ(player.role(),"OperationsExpert");
 	  
