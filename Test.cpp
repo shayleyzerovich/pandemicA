@@ -69,23 +69,6 @@
 		CHECK(board[City::Atlanta] == 2);
 		CHECK(board[City::Miami] == 3);
 	  
-	  
-	        CHECK_THROWS_AS((board[City::London] == 5),std::exception);
-		CHECK_THROWS_AS((board[City::Paris] == 5),std::exception);
-		CHECK_THROWS_AS((board[City::Milan] == 5),std::exception);
-		CHECK_THROWS_AS((board[City::Madrid] == 5),std::exception);
-		CHECK_THROWS_AS((board[City::Bangkok] == 3),std::exception);
-		CHECK_THROWS_AS((board[City::Beijing] == 3),std::exception);
-		CHECK_THROWS_AS((board[City::BuenosAires] == 3),std::exception);
-		CHECK_THROWS_AS((board[City::Delhi] == 3),std::exception);
-		CHECK_THROWS_AS((board[City::HongKong] == 2),std::exception);
-		CHECK_THROWS_AS((board[City::Istanbul] == 2),std::exception);
-		CHECK_THROWS_AS((board[City::LosAngeles] == 2),std::exception);
-		CHECK_THROWS_AS((board[City::SanFrancisco] == 2),std::exception);
-		CHECK_THROWS_AS((board[City::Chicago] == 2),std::exception);
-		CHECK_THROWS_AS((board[City::Atlanta] == 4),std::exception);
-		CHECK_THROWS_AS((board[City::Miami] == 4),std::exception);
-		
 	
 
 		//Changes the diseases level
@@ -126,25 +109,6 @@
 		CHECK(board[City::Atlanta] == 3);
 		CHECK(board[City::Miami] == 2);
 	  
-	  
-	  CHECK_THROWS_AS((board[City::London] == 3),std::exception);
-		CHECK_THROWS_AS((board[City::Paris] == 3),std::exception);
-		CHECK_THROWS_AS((board[City::Milan] == 3),std::exception);
-		CHECK_THROWS_AS((board[City::Madrid] == 3),std::exception);
-		CHECK_THROWS_AS((board[City::Bangkok] == 3),std::exception);
-		CHECK_THROWS_AS((board[City::Beijing] == 3),std::exception);
-		CHECK_THROWS_AS((board[City::BuenosAires] == 5),std::exception);
-		CHECK_THROWS_AS((board[City::Delhi] == 5),std::exception);
-		CHECK_THROWS_AS((board[City::HongKong] == 5),std::exception);
-		CHECK_THROWS_AS((board[City::Istanbul] == 5),std::exception);
-		CHECK_THROWS_AS((board[City::LosAngeles] == 1),std::exception);
-		CHECK_THROWS_AS((board[City::SanFrancisco] == 1),std::exception);
-		CHECK_THROWS_AS((board[City::Chicago] == 1),std::exception);
-		CHECK_THROWS_AS((board[City::Atlanta] == 1),std::exception);
-		CHECK_THROWS_AS((board[City::Miami] == 1),std::exception);
-		
-		CHECK_THROWS_AS((board[City::Miami] == 4),std::exception);
-	
 
 		CHECK(board.is_clean() == false);
 	}
