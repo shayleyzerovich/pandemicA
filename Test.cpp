@@ -49,6 +49,7 @@
 	        board[City::Chicago] = 1;
 	        board[City::Atlanta] = 2;
          	board[City::Miami] = 3;
+		board[Algiers] = 1;
 	
 
 		// check the diseases level
@@ -68,6 +69,7 @@
 		CHECK(board[City::Chicago] == 1);
 		CHECK(board[City::Atlanta] == 2);
 		CHECK(board[City::Miami] == 3);
+		CHECK(board[City::Algiers] == 1);
 	  
 	
 
@@ -88,6 +90,7 @@
 	        board[City::Chicago] = 4;
 	        board[City::Atlanta] = 3;
 	        board[City::Miami] = 2;
+		board[Algiers] = 2;
 	
 
 	  
@@ -108,6 +111,7 @@
 		CHECK(board[City::Chicago] == 4);
 		CHECK(board[City::Atlanta] == 3);
 		CHECK(board[City::Miami] == 2);
+		CHECK(board[City::Algiers] == 2);
 	  
 
 		CHECK(board.is_clean() == false);
@@ -143,18 +147,24 @@
 	  //discover cure function
 		
 		CHECK_NOTHROW(player.drive(City::Delhi));
-		CHECK_THROWS(player.discover_cure(Color::Black));
+		CHECK_NOTHROW(player.fly_charter(City::Atlanta));
+		CHECK_THROWS(player.discover_cure(Color::Blue)); 
+	        CHECK_NOTHROW(player.drive(Miami));
+	        CHECK_THROWS(player.discover_cure(Color::Yellow));
 	
 
 	  //treat cure function
 		
-		player.take_card(City::Delhi);
-		CHECK_NOTHROW(player.fly_charter(City::London));
-		CHECK_NOTHROW(player.treat(City::London));
-		CHECK(board[City::London] == 4);
+		player.take_card(City::Miami);
+	        CHECK_NOTHROW(player.fly_charter(City::Algiers));
+	        CHECK_NOTHROW(player.treat(City::Algiers));
+	        CHECK(board[City::Algiers] == 1);
+		
+		
 	        
 	  //check role
-	       CHECK_EQ(player.role(),"OperationsExpert");
+		
+// 	       CHECK_EQ(player.role(),"OperationsExpert");
 	  
 	
 	}
