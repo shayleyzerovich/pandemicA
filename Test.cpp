@@ -120,18 +120,18 @@
 	//drive and build functions
 		
 	  OperationsExpert player{board,  City::London};
-	  CHECK_NOTHROW(player.drive(Paris));
-		CHECK_NOTHROW(player.drive(Madrid));
-		CHECK_NOTHROW(player.drive(NewYork));
-		CHECK_NOTHROW(player.drive(Montreal));
-		CHECK_NOTHROW(player.drive(Chicago));
+	  CHECK_NOTHROW(player.drive(City::Paris));
+		CHECK_NOTHROW(player.drive(City::Madrid));
+		CHECK_NOTHROW(player.drive(City::NewYork));
+		CHECK_NOTHROW(player.drive(City::Montreal));
+		CHECK_NOTHROW(player.drive(City::Chicago));
 		CHECK_NOTHROW(player.build());
 	  
 	//take card and fly direct functions
 		
 		player.take_card(City::Moscow);
 		CHECK_NOTHROW(player.fly_direct(City::Moscow));
-		CHECK_NOTHROW(player.drive(Tehran));
+		CHECK_NOTHROW(player.drive(City::Tehran));
 		CHECK_NOTHROW(player.build());
 	 
 	  //fly shuttle function
@@ -142,15 +142,15 @@
 
 	  //discover cure function
 		
-		CHECK_NOTHROW(player.drive(Delhi));
+		CHECK_NOTHROW(player.drive(City::Delhi));
 		CHECK_THROWS(player.discover_cure(Color::Black));
 	
 
 	  //treat cure function
 		
 		player.take_card(City::Delhi);
-		CHECK_NOTHROW(player.fly_charter(London));
-		CHECK_NOTHROW(player.treat(London));
+		CHECK_NOTHROW(player.fly_charter(City::London));
+		CHECK_NOTHROW(player.treat(City::London));
 		CHECK(board[City::London] == 4);
 	        
 	  //check role
