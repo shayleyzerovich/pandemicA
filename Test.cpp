@@ -142,27 +142,19 @@
 		CHECK_NOTHROW(player.fly_shuttle(City::Tehran));
 	
 
-	  //discover cure function
+	
 		
 		CHECK_NOTHROW(player.drive(City::Delhi));
 		CHECK_NOTHROW(player.fly_charter(City::Atlanta));
-		//CHECK_THROWS(player.discover_cure(Color::Blue)); 
 	        CHECK_NOTHROW(player.drive(City::Miami));
-	      //  CHECK_THROWS(player.discover_cure(Color::Yellow));
-	
+	   
 
-	  //treat cure function
 		
 		player.take_card(City::Miami);
 	        CHECK_NOTHROW(player.fly_charter(City::Algiers));
 	        CHECK_NOTHROW(player.treat(City::Algiers));
-	        //CHECK(board[City::Algiers] == 1);
+	      
 		
-		
-	        
-	  //check role
-		
-// 	       CHECK_EQ(player.role(),"OperationsExpert");
 	  
 	
 	}
